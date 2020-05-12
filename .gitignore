@@ -1,0 +1,7 @@
+venv
+.idea
+assets
+build
+.tmp
+
+*.pyc
