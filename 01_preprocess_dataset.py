@@ -3,10 +3,15 @@ import os
 import pathlib
 import pickle
 import random
+from argparse import Namespace
 
 import nltk
 
 from utils import print_inline, normalize
+
+params = Namespace(
+    ratio=0.2,
+)
 
 
 def preprocess_dataset(fields=None):
@@ -25,7 +30,7 @@ def preprocess_dataset(fields=None):
                 line = fp.readline().strip()
                 if not line:
                     break
-                if random.random() > 0.2:  # pick 20%
+                if random.random() > params.ratio:  # pick 20%
                     continue
                 fw.write(line + os.linesep)
                 count += 1
