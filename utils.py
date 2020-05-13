@@ -55,7 +55,6 @@ def normalize(text):
     return len(tokens), " ".join(tokens).lower()
 
 
-
 def yes_or_no(question):
     c = str(input(question + " (Y/N): ")).lower().strip()[:1]
     if c not in ("y", "n"):
