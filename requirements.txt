@@ -1,7 +1,7 @@
 torch==1.5.0
 gensim==3.8.3
 numpy==1.18.4
-nltk==3.5
+nltk==3.9
 wheel
 flask-api==2.0
 pyvi
